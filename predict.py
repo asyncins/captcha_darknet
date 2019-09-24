@@ -20,7 +20,7 @@ for i in predicts:
     out = os.path.join(PATH_OUT, str(i.name))
     coo = os.path.join(PATH_COO, str(i.stem) + '.txt')
     command = 'cd darknet && ./darknet detector {instruct} data/{data} cfg/{cfg}' \
-              ' weights/{weights} -out {out} -coo {coo} {i} -thresh 0.5 -gpus 0 ' \
+              ' weights/{weights} -out {out} {i} -thresh 0.5 -gpus 0 ' \
               .format(instruct=instruct, data=data, cfg=cfg,
-                      weights=weights, out=out, coo=coo, i=i)
+                      weights=weights, out=out, i=i)
     os.system(command)
