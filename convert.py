@@ -54,5 +54,5 @@ def generate_train_txt(folder: str, name: str):
 
 if __name__ == '__main__':
     xml_to_txt(PATH_IMAGES, PATH_LABELS)
-    generate_train_txt(PATH_PREDICTS, PATH_PREDICT)
+    generate_train_txt(PATH_IMAGES, PATH_TRAIN)
     pass
